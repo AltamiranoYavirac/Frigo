@@ -12,11 +12,11 @@ import { RoleModule } from './modules/role/role.module';
 import { ClienteModule } from './modules/cliente/cliente.module';
 import { PedidoModule } from './modules/pedido/pedido.module';
 import { TicketsModule } from './modules/tickets/tickets.module';
-
 import { ConfigModule, ConfigService } from '@nestjs/config'; // ✅ Config
 import { MailerModule } from '@nestjs-modules/mailer';        // ✅ Mailer
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
 import { join } from 'path';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Module({
   imports: [
@@ -43,7 +43,7 @@ import { join } from 'path';
           from: `"Frigoservicios" <${configService.get<string>('MAIL_USER')}>`,
         },
         template: {
-          dir: join(__dirname, 'templates'), // puedes quitar si no usas plantillas
+          dir: join(__dirname, 'templates'),
           adapter: new HandlebarsAdapter(),
           options: {
             strict: true,
@@ -52,7 +52,7 @@ import { join } from 'path';
       }),
     }),
 
-    // ✅ Tus demás módulos
+    // Otros módulos de tu aplicación
     AuthModule,
     UsersModule,
     DatabaseModule,
@@ -63,8 +63,9 @@ import { join } from 'path';
     ClienteModule,
     PedidoModule,
     TicketsModule,
+    ReactiveFormsModule, // Aquí agregas el módulo Tecnico
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController], // Aquí declaras el controlador de Tecnico
+  providers: [AppService], // Aquí declaras el servicio de Tecnico
 })
 export class AppModule {}
