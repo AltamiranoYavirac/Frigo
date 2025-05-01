@@ -9,6 +9,7 @@ import { ListaPedidoComponent } from './pedido/components/lista-pedido/lista-ped
 import { authGuard } from '../guards/auth.guard';
 import { TicketsComponent } from './tickets/tickets.component'; // 👈 Importación del componente
 
+
 const routes: Routes = [
   {
     path: "",
@@ -39,11 +40,7 @@ const routes: Routes = [
         component: ListaPedidoComponent,
         canActivate: [authGuard]
       },
-      {
-        path: "tickets", // 👈 Ruta añadida
-        component: TicketsComponent,
-        canActivate: [authGuard]
-      }
+
     ]
   }
 ];

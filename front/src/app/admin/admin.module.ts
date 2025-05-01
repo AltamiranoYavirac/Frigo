@@ -15,11 +15,12 @@ import { PedidoModule } from './pedido/pedido.module';
 import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
 
+
 @NgModule({
   declarations: [
     ClienteComponent,
     PerfilComponent,
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     CommonModule,

@@ -38,10 +38,10 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Roles y usuarios',
+                label: 'Tecnicos y visualización',
                 items: [
-                    { label: 'Usuarios', icon: 'pi pi-fw pi-user', routerLink: ['/utilities/icons'] },
-                    { label: 'Roles', icon: 'pi pi-fw pi-desktop', url: ['https://www.primefaces.org/primeflex/'], target: '_blank' },
+                    { label: 'Técnicos', icon: 'pi pi-fw pi-user', routerLink: ['/tecnicos'] },
+                    { label: 'Visualizar Técnicos', icon: 'pi pi-fw pi-desktop', url: ['https://www.primefaces.org/primeflex/'], target: '_blank' },
                 ]
             },
 
