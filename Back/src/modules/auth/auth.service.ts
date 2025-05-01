@@ -23,10 +23,6 @@ export class AuthService {
    * ✅ Registrar un nuevo usuario con contraseña encriptada
    */
   async funRegister(objUser: RegisterAuthDto) {
-    if (!objUser.password) {
-      throw new HttpException('La contraseña es requerida', 400);
-    }
-
     const hashedPassword = await hash(objUser.password, 12);
     const newUser = { ...objUser, password: hashedPassword };
     return this.userRepository.save(newUser);
@@ -48,8 +44,10 @@ export class AuthService {
       throw new HttpException('Password invalido', 401);
     }
 
+    /*const payload = { email: user.email, id: user.id };
+    const token = this.jwtService.sign(payload);*/
     const payload = { email: user.email, role: user.role, id: user.id };
-    const token = await this.jwtService.signAsync(payload);
+    const token = await this.jwtService.signAsync(payload)
 
     return { user, token };
   }

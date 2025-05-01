@@ -11,7 +11,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJwQGhtLmNvbSIsImlkIjoxLCJpYXQiOjE3NDQzMjYyNTcsImV4cCI6MTc0NDMyNzEzN30.8TP6QgOZ0KfPMJuOpAguotRzUO4lO3pkalA6bnEauZY
 
     {
-    "nombre": " los pperemonimosnios ",
+    "nombre": " la poderos ",
     "precio": "7.00",
     "stock": 1,
     "categoriaId": 1
