@@ -13,7 +13,7 @@
     >
       <div class="w-full py-10 px-6 sm:px-10" style="border-radius: 2rem; background-color: white;">
         <!-- LOGO -->
-        <div class="text-center mb-6">
+        <div class="text-center mb-6" style="margin-top: 1.rem; border-radius: 2.5rem; padding: 1.5rem;">
           <div
             style="
               background: linear-gradient(135deg, #FF6B00 20%, #007BFF 80%);
@@ -139,10 +139,6 @@
             "
             onmouseover="this.style.background='linear-gradient(90deg,#ff9100,#ff6b00)'"
             onmouseout="this.style.background='linear-gradient(90deg,#ff6b00,#ff9100)'"
-            [disabled]="
-              !registerForm.form.valid ||
-              !validEmail(formData.email) ||
-              !validPassword(formData.password)"
           ></button>
         </form>
       </div>
