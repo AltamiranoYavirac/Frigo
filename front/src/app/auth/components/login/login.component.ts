@@ -43,21 +43,7 @@ export class LoginComponent {
       return;
     }
 
-    const allowedDomains = ['@tecnico.com', '@admin.com', '@cliente.com'];
-    const isDomainValid = allowedDomains.some(domain => email.endsWith(domain));
-
-    if (!isDomainValid) {
-      alert('Solo se permite el acceso a correos con los dominios @tecnico.com, @admin.com o @cliente.com');
-      return;
-    }
-
-    if (!this.validPassword(password)) {
-      alert('La contraseña debe tener al menos 6 caracteres y un carácter especial.');
-      return;
-    }
-
-    this.errorLogin = false;
-    this.notRegistered = false;
+    
 
     this.authService.loginConNest(this.loginForm.value).subscribe(
       (res) => {
